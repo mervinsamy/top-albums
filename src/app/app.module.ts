@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { AlbumsListComponent } from './albums-list/albums-list.component';
-
-
+import { NgsRevealModule} from "ng-scrollreveal";
 
 @NgModule({
   declarations: [
@@ -19,7 +18,8 @@ import { AlbumsListComponent } from './albums-list/albums-list.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    NgsRevealModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

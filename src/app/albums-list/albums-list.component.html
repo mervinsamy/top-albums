@@ -2,12 +2,15 @@
   <p class="lead" *ngIf="loading">Loading...</p>
 </div>
 
-<div class="album container">
+<div class="album container" >
   <div class="row">
-    <div class="list-group-item col-6 col-md-4 col-lg-3 justify-content-between" *ngFor="let item of results">
-      <a href="{{item.link.attributes.href}}">
+    <div class="list-group-item col-6 col-md-4 col-lg-3 justify-content-between" *ngFor="let item of results" ngsReveal>
+      <a class="no-underline" href="{{item.link.attributes.href}}">
         <img class="img-fluid rounded mx-auto d-block" src="{{item['im:image']['2'].label}}">
-        <p class="text-center albums-list-title text-truncate"> {{item['im:name'].label}}</p>
+           <div class="album-list-desc">
+            <p class="text-center albums-list-title text-truncate"> {{item['im:name'].label}}</p>
+            <p class="text-center albums-list-artist"> {{item['im:artist'].label}}</p>
+          </div>
       </a>
     </div>
   </div>

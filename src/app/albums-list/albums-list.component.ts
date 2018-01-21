@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable} from "rxjs/Observable";
 import {HttpClient} from "@angular/common/http";
+import {NgsRevealModule} from "ng-scrollreveal";
 
 @Component({
   selector: 'app-albums-list',

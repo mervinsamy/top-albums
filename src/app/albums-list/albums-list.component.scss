@@ -1,3 +1,24 @@
+
+.album .list-group-item {
+  &:hover {
+    background: linear-gradient(lighten(gray, 36), white);
+    transition: background 5s ease 5s;
+    //transition-delay: 1s;
+  }
+}
+
 .albums-list-title {
   color: black;
+  margin:0;
+}
+
+.albums-list-artist {
+  color:gray;
+  font-size: 0.8em;
+  margin:0;
+}
+
+.album-list-desc {
+  position: relative;
+  margin: 0.5em;
 }
