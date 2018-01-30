@@ -18,11 +18,14 @@ export class AlbumsListComponent implements OnInit {
   ngOnInit(): void {
     this.http.get("https://itunes.apple.com/us/rss/topalbums/limit=100/json").subscribe(data=> {
      this.results = data['feed']['entry'];
-     console.log(this.results);
+     let mod_result = this.results;
+     for (var item of this.results){
+       var imageLinktoHttps = item['im:image']['2']['label'];
+       imageLinktoHttps = imageLinktoHttps.replace(/^http:\/\//i, 'https://');
+        }
+       item['im:image']['2']['label'] = imageLinktoHttps;
     },
-      err => {
-        console.log("Error occured.");
-      }
+
     )
   }
 
